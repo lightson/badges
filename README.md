@@ -17,7 +17,6 @@ When designing Podlink, I hunted down vector versions of all the podcast app ico
 | [Castbox](https://helpcenter.castbox.fm/portal/en/kb/articles/add-castb) | ![Castbox icon](icons/castbox.svg) | ![Listen on Castbox](badges/castbox-light.svg) | ![Listen on Castbox](badges/castbox-dark.svg) |
 | [Castro](https://castro.fm/support/link-to-your-podcast-in-castro) | ![Castro icon](icons/castro.svg) | ![Listen on Castro](badges/castro-light.svg) | ![Listen on Castro](badges/castro-dark.svg) |
 | CurioCaster | ![CurioCaster icon](icons/curiocaster.svg) | ![Listen on CurioCaster](badges/curiocaster-light.svg) | ![Listen on CurioCaster](badges/curiocaster-dark.svg) |
-| Deepcast | ![Deepcast icon](icons/deepcast.svg) | ![Listen on Deepcast](badges/deepcast-light.svg) | ![Listen on Deepcast](badges/deepcast-dark.svg) |
 | [Deezer](https://deezerbrand.com/) | ![Deezer icon](icons/deezer.svg) | ![Listen on Deezer](badges/deezer-light.svg) | ![Listen on Deezer](badges/deezer-dark.svg) |
 | Downcast | ![Downcast icon](icons/downcast.svg) | ![Listen on Downcast](badges/downcast-light.svg) | ![Listen on Downcast](badges/downcast-dark.svg) |
 | Fathom | ![Fathom icon](icons/fathom.svg) | ![Listen on Fathom](badges/fathom-light.svg) | ![Listen on Fathom](badges/fathom-dark.svg) |
@@ -48,10 +47,8 @@ When designing Podlink, I hunted down vector versions of all the podcast app ico
 | Podcast Republic | ![Podcast Republic icon](icons/podcastrepublic.svg) | ![Listen on Podcast Republic](badges/podcastrepublic-light.svg) | ![Listen on Podcast Republic](badges/podcastrepublic-dark.svg) |
 | [Podchaser](https://support.podchaser.com/en/articles/5253592-generating-a-podchaser-badge-for-your-podcast) | ![Podchaser icon](icons/podchaser.svg) | ![Listen on Podchaser](badges/podchaser-light.svg) | ![Listen on Podchaser](badges/podchaser-dark.svg) |
 | Pod Engine | ![Pod Engine icon](icons/podengine.svg) | ![Listen on Pod Engine](badges/podengine-light.svg) | ![Listen on Pod Engine](badges/podengine-dark.svg) |
-| Podfriend | ![Podfriend icon](icons/podfriend.svg) | ![Listen on Podfriend](badges/podfriend-light.svg) | ![Listen on Podfriend](badges/podfriend-dark.svg) |
 | Podimo | ![Podimo icon](icons/podimo.svg) | ![Listen on Podimo](badges/podimo-light.svg) | ![Listen on Podimo](badges/podimo-dark.svg) |
 | Podkicker | ![Podkicker icon](icons/podkicker.svg) | ![Listen on Podkicker](badges/podkicker-light.svg) | ![Listen on Podkicker](badges/podkicker-dark.svg) |
-| Podknife | ![Podknife icon](icons/podknife.svg) | ![Listen on Podknife](badges/podknife-light.svg) | ![Listen on Podknife](badges/podknife-dark.svg) |
 | PodLP | ![PodLP icon](icons/podlp.svg) | ![Listen on PodLP](badges/podlp-light.svg) | ![Listen on PodLP](badges/podlp-dark.svg) |
 | Podnews | ![Podnews icon](icons/podnews.svg) | ![Listen on Podnews](badges/podnews-light.svg) | ![Listen on Podnews](badges/podnews-dark.svg) |
 | podStation | ![podStation icon](icons/podstation.svg) | ![Listen on podStation](badges/podstation-light.svg) | ![Listen on podStation](badges/podstation-dark.svg) |
@@ -84,11 +81,14 @@ When designing Podlink, I hunted down vector versions of all the podcast app ico
 | Apollo | ![Apollo icon](icons/apollo.svg) | ![Listen on Apollo](badges/apollo-light.svg) | ![Listen on Apollo](badges/apollo-dark.svg) |
 | Breaker | ![Breaker icon](icons/breaker.svg) | ![Listen on Breaker](badges/breaker-light.svg) | ![Listen on Breaker](badges/breaker-dark.svg) |
 | Bullhorn | ![Bullhorn icon](icons/bullhorn.svg) | ![Listen on Bullhorn](badges/bullhorn-light.svg) | ![Listen on Bullhorn](badges/bullhorn-dark.svg) |
+| Deepcast | ![Deepcast icon](icons/deepcast.svg) | ![Listen on Deepcast](badges/deepcast-light.svg) | ![Listen on Deepcast](badges/deepcast-dark.svg) |
 | Google Podcasts | ![Google Podcasts icon](icons/google.svg) | ![Listen on Google Podcasts](badges/google-light.svg) | ![Listen on Google Podcasts](badges/google-dark.svg) |
 | Instacast | ![Instacast icon](icons/instacast.svg) | ![Listen on Instacast](badges/instacast-light.svg) | ![Listen on Instacast](badges/instacast-dark.svg) |
 | iTunes | ![iTunes icon](icons/itunes.svg) | ![Listen on iTunes](badges/itunes-light.svg) | ![Listen on iTunes](badges/itunes-dark.svg) |
 | Jam | ![Jam icon](icons/jam.svg) | ![Listen on Jam](badges/jam-light.svg) | ![Listen on Jam](badges/jam-dark.svg) |
+| Podfriend | ![Podfriend icon](icons/podfriend.svg) | ![Listen on Podfriend](badges/podfriend-light.svg) | ![Listen on Podfriend](badges/podfriend-dark.svg) |
 | Podhero | ![Podhero icon](icons/podhero.svg) | ![Listen on Podhero](badges/podhero-light.svg) | ![Listen on Podhero](badges/podhero-dark.svg) |
+| Podknife | ![Podknife icon](icons/podknife.svg) | ![Listen on Podknife](badges/podknife-light.svg) | ![Listen on Podknife](badges/podknife-dark.svg) |
 | Podvine | ![Podvine icon](icons/podvine.svg) | ![Listen on Podvine](badges/podvine-light.svg) | ![Listen on Podvine](badges/podvine-dark.svg) |
 | RadioPublic | ![RadioPublic icon](icons/radiopublic.svg) | ![Listen on RadioPublic](badges/radiopublic-light.svg) | ![Listen on RadioPublic](badges/radiopublic-dark.svg) |
 | Resso | ![Resso icon](icons/resso.svg) | ![Listen on Resso](badges/resso-light.svg) | ![Listen on Resso](badges/resso-dark.svg) |

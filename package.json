@@ -2,7 +2,7 @@
   "name": "podcast-badges",
   "type": "module",
   "version": "0.0.1",
-  "description": "A collection of vector podcast app icons and badges",
+  "description": "Podcast Badges by Podlink - A collection of vector podcast app icons and badges",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

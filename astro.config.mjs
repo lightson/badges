@@ -3,8 +3,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://nathangathright.github.io',
-  base: '/podcast-badges',
+  site: 'https://badges.podlink.com',
+  base: '',
   vite: {
     plugins: [tailwindcss()]
   },

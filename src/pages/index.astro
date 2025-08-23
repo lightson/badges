@@ -1,0 +1,196 @@
+---
+import Layout from '../layouts/Layout.astro';
+import platformsData from '../data/platforms.json';
+import { Search, ScrollText, Sun, Moon, ExternalLink } from 'lucide-astro';
+
+// Filter platforms by active status
+const activePlatforms = platformsData.platforms.filter(platform => platform.active);
+---
+
+<Layout title="Podcast Badges">
+  <div>
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">Podcast Badges</h1>
+    <div class="prose prose-lg text-gray-600 max-w-none">
+      <p class="mb-4">
+        While building <a href="https://pod.link" class="text-primary-600 hover:text-primary-700">Podlink<a>, I’ve spent an inordinate amount of time collecting and optimizing high quality versions of every podcast app icon I could find, often redrawing raster images as SVGs. After seeing my distinctive versions crop up here and there, I've decided to publish my full collection on <a href="https://github.com/nathangathright/podcast-badges" class="text-primary-600 hover:text-primary-700">GitHub</a>. Please refer to the linked guidelines (when available) for official badges and usage guidelines.
+      </p>
+      <p class="text-sm text-gray-500">
+        All trademarks are the property of their respective owners. This collection is provided for educational and promotional use only.
+      </p>
+    </div>
+  </div>
+  <div>
+    <div class="my-6 sticky">
+      <div class="flex items-center gap-4">
+        <label for="searchPlatforms" class="sr-only">Search platforms</label>
+        <input 
+          type="search" 
+          id="searchPlatforms" 
+          placeholder="Search podcast platforms…" 
+          class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+        />
+        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <Search class="w-4 h-4" />
+        </div>
+      </div>
+    </div>
+    <div class="overflow-x-auto overflow-y-auto">
+      <table class="w-full border-collapse">
+        <thead class="bg-gray-200 z-10 shadow-sm">
+          <tr class="border-b border-gray-200">
+            <th class="text-left py-3 px-4 font-medium text-gray-900">App</th>
+            <th class="text-center py-3 px-4 font-medium text-gray-900">Icon</th>
+            <th class="text-left py-3 px-4 font-medium text-gray-900">
+              <div class="flex items-center gap-2">
+                <span>Badge</span>
+                <button 
+                  id="badgeToggle" 
+                  class="p-1.5 bg-gray-50 text-gray-600 hover:text-gray-600 hover:bg-gray-200 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                  data-active="dark"
+                  title="Toggle badge style"
+                >
+                  <Moon id="darkIcon" class="w-4 h-4" />
+                  <Sun id="lightIcon" class="w-4 h-4 hidden" />
+                </button>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {activePlatforms.map((platform) => (
+            <tr class="border-b border-gray-200 hover:bg-gray-200 transition-colors">
+                <!-- Name Column -->
+                <td class="py-3 px-4 font-bold text-base text-gray-900">
+                  {platform.name}
+                  {platform.guidelinesUrl && (
+                    <a href={platform.guidelinesUrl} target="_blank" rel="noopener noreferrer" 
+                        class="inline-block text-primary-600">
+                      <ExternalLink class="w-4 h-4" />
+                    </a>
+                  )}
+                </td>
+              
+              <!-- Icon Column -->
+              <td class="py-3 px-4 text-center">
+                <a href={`/podcast-badges/icons/${platform.icon}.svg`} download 
+                   class="block cursor-pointer hover:opacity-80 transition-opacity">
+                  <img src={`/podcast-badges/icons/${platform.icon}.svg`} alt={`${platform.name} icon`} 
+                       class="h-8 w-auto mx-auto" />
+                </a>
+              </td>
+              
+              <!-- Badge Column -->
+              <td class="py-3 px-4 text-center">
+                <div class="asset-container" data-platform={platform.icon}>
+                  <!-- Badge (Dark) -->
+                  <div class="asset-item" data-type="badge-dark">
+                    <a href={`/podcast-badges/badges/${platform.icon}-dark.svg`} download 
+                       class="block cursor-pointer hover:opacity-80 transition-opacity">
+                      <img src={`/podcast-badges/badges/${platform.icon}-dark.svg`} alt={`${platform.name} Dark Badge`} 
+                           class="h-10" />
+                    </a>
+                  </div>
+                  <!-- Badge (Light) -->
+                  <div class="asset-item hidden" data-type="badge-light">
+                    <a href={`/podcast-badges/badges/${platform.icon}-light.svg`} download 
+                       class="block cursor-pointer hover:opacity-80 transition-opacity">
+                      <img src={`/podcast-badges/badges/${platform.icon}-light.svg`} alt={`${platform.name} Light Badge`} 
+                       class="h-10" />
+                    </a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Badge icon toggle functionality
+      const badgeToggle = document.getElementById('badgeToggle');
+      const darkIcon = document.getElementById('darkIcon');
+      const lightIcon = document.getElementById('lightIcon');
+      
+      // Check if all required elements exist
+      if (!badgeToggle || !darkIcon || !lightIcon) {
+        console.error('Required badge toggle elements not found');
+        return;
+      }
+      
+      // Initial display (Badge Dark is default)
+      updateAssetDisplay('badge-dark');
+      
+      // Handle badge toggle
+      badgeToggle.addEventListener('click', toggleBadgeStyle);
+      
+      function updateAssetDisplay(badgeType) {
+        // Hide all asset items
+        document.querySelectorAll('.asset-item').forEach(item => {
+          item.classList.add('hidden');
+        });
+        
+        // Show selected badge type
+        document.querySelectorAll(`[data-type="${badgeType}"]`).forEach(item => {
+          item.classList.remove('hidden');
+        });
+      }
+      
+      function toggleBadgeStyle() {
+        const isDark = badgeToggle!.getAttribute('data-active') === 'dark';
+        const newType = isDark ? 'light' : 'dark';
+        
+        // Update toggle state
+        badgeToggle!.setAttribute('data-active', newType);
+        
+        // Update icon display
+        if (newType === 'light') {
+          darkIcon!.classList.add('hidden');
+          lightIcon!.classList.remove('hidden');
+        } else {
+          lightIcon!.classList.add('hidden');
+          darkIcon!.classList.remove('hidden');
+        }
+        
+        // Update asset display
+        updateAssetDisplay(`badge-${newType}`);
+      }
+
+      // Search functionality
+      const searchInput = document.getElementById('searchPlatforms');
+      const platformRows = document.querySelectorAll('tbody tr');
+
+      searchInput.addEventListener('input', function() {
+        searchInput ? filterPlatforms(searchInput.value) : console.error('Search input not found');
+      });
+
+      function filterPlatforms(searchTerm) {
+        if (!searchTerm || searchTerm.trim() === '') {
+          // Show all rows if search is empty
+          platformRows.forEach(row => {
+            row.classList.remove('hidden');
+          });
+          return;
+        }
+        
+        platformRows.forEach(row => {
+          const assetContainer = row.querySelector('.asset-container');
+          if (!assetContainer) return;
+
+          const platformName = assetContainer.getAttribute('data-platform');
+          if (!platformName) return;
+          
+          const displayName = platformName.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+          
+          if (displayName.toLowerCase().includes(searchTerm.toLowerCase().trim())) {
+            row.classList.remove('hidden');
+          } else {
+            row.classList.add('hidden');
+          }
+        });
+      }
+    });
+  </script>
+</Layout>

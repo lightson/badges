@@ -1,0 +1,26 @@
+{
+  "name": "podcast-badges",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "A collection of vector podcast app icons and badges",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "clean": "rm -rf dist .astro",
+    "type-check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^4.0.0",
+    "lucide-astro": "^0.541.0",
+    "phosphor-icons": "^1.4.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.0.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.9.2"
+  }
+}

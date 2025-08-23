@@ -12,7 +12,7 @@ const activePlatforms = platformsData.platforms.filter(platform => platform.acti
     <h1 class="text-3xl font-bold text-gray-900 mb-4">Podcast Badges</h1>
     <div class="prose prose-lg text-gray-600 max-w-none">
       <p class="mb-4">
-        While building <a href="https://pod.link" class="text-primary-600 hover:text-primary-700">Podlink<a>, I’ve spent an inordinate amount of time collecting and optimizing high quality versions of every podcast app icon I could find, often redrawing raster images as SVGs. After seeing my distinctive versions crop up here and there, I've decided to publish my full collection on <a href="https://github.com/nathangathright/podcast-badges" class="text-primary-600 hover:text-primary-700">GitHub</a>. Please refer to the linked guidelines (when available) for official badges and usage guidelines.
+        While building <a href="https://pod.link" class="text-blue-600 hover:text-blue-700">Podlink<a>, I’ve spent an inordinate amount of time collecting and optimizing high quality versions of every podcast app icon I could find, often redrawing raster images as SVGs. After seeing my distinctive versions crop up here and there, I've decided to publish my full collection on <a href="https://github.com/nathangathright/podcast-badges" class="text-blue-600 hover:text-blue-700">GitHub</a>. Please refer to the linked guidelines (when available) for official badges and usage guidelines.
       </p>
       <p class="text-sm text-gray-500">
         All trademarks are the property of their respective owners. This collection is provided for educational and promotional use only.
@@ -27,7 +27,7 @@ const activePlatforms = platformsData.platforms.filter(platform => platform.acti
           type="search" 
           id="searchPlatforms" 
           placeholder="Search podcast platforms…" 
-          class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+          class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <Search class="w-4 h-4" />
@@ -64,7 +64,7 @@ const activePlatforms = platformsData.platforms.filter(platform => platform.acti
                   {platform.name}
                   {platform.guidelinesUrl && (
                     <a href={platform.guidelinesUrl} target="_blank" rel="noopener noreferrer" 
-                        class="inline-block text-primary-600">
+                        class="inline-block text-blue-600">
                       <ExternalLink class="w-4 h-4" />
                     </a>
                   )}
